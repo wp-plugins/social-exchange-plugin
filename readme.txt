@@ -29,3 +29,23 @@ The system keeps the score by a services app located on our server.
 3.  Upload the `/social-exchange/` folder to the `/wp-content/plugins/` folder on your site
 4.  Visit Network Admin -> Plugins and Network Activate it there.
 5.  Alternatively, you can activate this plugin on individual sites by going to the Site Admin -> Plugins menu and activating there.
+
+== Frequently Asked Questions ==
+
+= How many points I spend for one share of my post? =
+
+Currently you spend 5 points to get one share of your post.
+
+= How many points I earn for sharing posts of others? =
+
+Currently you earn 4 points for sharing one post.
+
+= How will I allocate points for my post? =
+
+You need to edit your post, set "Allocate new points" to a multiple of 5: 5 points for 1 share, 10 points for 2, 15 for 3, etc.
+
+
+== Screenshots ==
+
+1. Get Facebook shares for your posts from other users. Allocate 5 points for one share request.
+2. Share other users posts and earn points.
