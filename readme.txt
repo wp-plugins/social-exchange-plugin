@@ -1,5 +1,5 @@
 === Social Exchange Plugin ===
-Contributors: Socia Exchange
+Contributors: Social Exchange
 Donate link: 
 Tags: share your WordPress post, get Facebook shares, increase your Facebook Shares
 Requires at least: 3.3
