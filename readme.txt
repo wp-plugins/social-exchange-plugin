@@ -1,7 +1,7 @@
 === Social Exchange Plugin ===
 Contributors: Social Exchange
 Donate link: 
-Tags: share your WordPress post, get Facebook shares, increase your Facebook Shares
+Tags: Facebook, share, like, sharing, social, recommend, post, share, facebook like, facebook post, button, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, 
 Requires at least: 3.3
 Tested up to: 3.5.1
 Stable tag: trunk
