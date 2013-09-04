@@ -12,15 +12,15 @@ Get instant Facebook shares for your WordPress posts
 
 == Description ==
 
-**The Social Exchange Plugin** allows users to promote their posts and pages through a points-based system.
+**The Social Exchange Plugin** allows users to promote their posts and pages on Facebook through a points-based system.
 
-Users will be presented other posts / pages and they will get points by sharing those posts.
+The Facebook shares and likes of your blog posts will grow as the other users will like and share them.
 
-The points can be then assigned for the users own posts to be shared.
+You will be presented other posts / pages and you will get points by sharing those posts on Facebook. If you don't like a post or don't consider it interesting, you can skip it and choose another one. Then you can use these points to promote your posts and get new Facebook shares and likes.
 
 The system keeps the score by a services app located on our server.
 
-*Social Exchanges are the latest trend in the last years with many established websites dominating the scene. We aim to bring WordPress users a more easy and convenient way to gain social exposure, through this plugin.
+You will receive 200 points as a welcome bonus. You can use them to get 40 Facebook shares for your posts! 
 
 == Installation ==
 
