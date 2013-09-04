@@ -20,7 +20,7 @@ You will be presented other posts / pages and you will get points by sharing tho
 
 The system keeps the score by a services app located on our server.
 
-*You will receive 200 points as a welcome bonus. You can use them to get 40 Facebook shares for your posts!*
+*You will receive **200 points** as a welcome bonus. You can use them to get 40 Facebook shares for your posts!*
 
 == Installation ==
 
