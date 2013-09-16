@@ -3,7 +3,7 @@
 		Plugin Name: Social Exchange
 		Plugin URI: http://www.socialexchangeplugin.com/
 		Description: Social exchange plugin for wordpress
-		Version: 1.16
+		Version: 1.17
 		Author: Social Exchange Plugin team
 		Author URI: http://www.socialexchangeplugin.com/
 		License: GPL
