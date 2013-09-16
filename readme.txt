@@ -16,11 +16,11 @@ Get instant Facebook shares for your WordPress posts
 
 The Facebook shares and likes of your blog posts will grow as the other users will like and share them.
 
-You will be presented other posts / pages and you will get points by sharing those posts on Facebook. If you don't like a post or don't consider it interesting, you can skip it and choose another one. Then you can use these points to promote your own posts and get new Facebook shares and likes for them.
+You will be presented posts from other blogs and you will gain points by sharing them on Facebook. If you don't like a post or don't consider it interesting, you can skip it and choose another one. Then you can use these points to promote your own posts and get new Facebook shares and likes for them.
 
 The system keeps the score by a services app located on our server.
 
-*You will receive **50 points** as a welcome bonus. You can use them to get 40 Facebook shares for your posts!*
+*You will receive **50 points** at start, as a welcome bonus. You can use them to get 10 Facebook shares for your posts right away!*
 
 == Installation ==
 
