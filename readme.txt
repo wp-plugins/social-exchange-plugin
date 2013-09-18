@@ -12,13 +12,21 @@ Get instant Facebook shares for your WordPress posts
 
 == Description ==
 
-**The Social Exchange Plugin** allows users to promote their posts and pages on Facebook through a points-based system.
 
-The Facebook shares and likes of your blog posts will grow as the other users will like and share them.
+Do you dream of your content being shared? This is precisely what **The Social Exchange Plugin** helps you accomplish: increase the number of Facebook Likes and Shares of your posts and pages.
 
-You will be presented posts from other blogs and you will gain points by sharing them on Facebook. If you don't like a post or don't consider it interesting, you can skip it and choose another one. Then you can use these points to promote your own posts and get new Facebook shares and likes for them.
+We help WordPress Users get more Likes and Shares through the "Social Exchange" - a points-based reciprocal system. It works like this:
+- when you install the plugin we give you FREE points
+- you spend your points giving them to people sharing your content
+- you get more points by sharing others content
 
-The system keeps the score by a services app located on our server.
+IMPORTANT: You should display the Facebook LIKES button on your shared posts and pages so your audience can see on your website the number of Likes. (Facebook adds the likes and the shares into 1 single metric). This is an important social proof indicator for your readers.
+
+It's a WASTE OF MONEY AND TIME to have a good website/blog that nobody is seeing or reading. The Social Exchange Plugin helps you achieve 2 goals:
+1. distribute your content
+2. show the world your content is liked (distributed)
+
+NOTE: We are starting with Facebook Likes (Shares) and will add more features and social networks to the plugin. Please share the love about Social-Exchange-Plugin so we know you like it and we'll keep improving it. Thank You!
 
 *You will receive **50 points** at start, as a welcome bonus. You can use them to get 10 Facebook shares for your posts right away!*
 
