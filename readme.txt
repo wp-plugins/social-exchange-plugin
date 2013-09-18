@@ -31,7 +31,6 @@ It's a WASTE OF MONEY AND TIME to have a good website/blog that nobody is seeing
 
 NOTE: We are starting with Facebook Likes (Shares) and will add more features and social networks to the plugin. Please share the love about Social-Exchange-Plugin so we know you like it and we'll keep improving it. Thank You!
 
-*You will receive **50 points** at start, as a welcome bonus. You can use them to get 10 Facebook shares for your posts right away!*
 
 == Installation ==
 
