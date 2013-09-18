@@ -18,7 +18,7 @@ Do you dream of your content being shared?
 This is precisely what The Social Exchange Plugin helps you accomplish: **increase the number of Facebook Likes and Shares** of your posts and pages.
 
 We help WordPress Users get more Likes and Shares through the "Social Exchange" - a points-based reciprocal system. It works like this:
-*- when you install the plugin we give you FREE points, *- you spend your points giving them to people sharing your content, *- you get more points by sharing others content
+* when you install the plugin we give you FREE points, * you spend your points giving them to people sharing your content, * you get more points by sharing others content.
 
 IMPORTANT: You should display the Facebook LIKES button on your shared posts and pages so your audience can see on your website the number of Likes. (Facebook adds the likes and the shares into 1 single metric). This is an important social proof indicator for your readers.
 
