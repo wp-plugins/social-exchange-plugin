@@ -29,7 +29,8 @@ It's a WASTE OF MONEY AND TIME to have a good website/blog that nobody is seeing
 1. distribute your content
 2. show the world your content is liked (distributed).
 
-NOTE: We are starting with Facebook Likes (Shares) and will add more features and social networks to the plugin. Please share the love about Social-Exchange-Plugin so we know you like it and we'll keep improving it. Thank You!
+NOTE: We are starting with Facebook Likes (Shares) and will add more features and social networks to the plugin. You can stay updated with the latest news on our [SocialExchange](http://www.socialexchangeplugin.com/ “See the latest developments on social exchange plugin”) plugin page. 
+Please share the love about Social-Exchange-Plugin so we know you like it and we'll keep improving it. Thank You!
 
 
 == Installation ==
