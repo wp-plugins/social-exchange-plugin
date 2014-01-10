@@ -29,7 +29,7 @@ It's a WASTE OF MONEY AND TIME to have a good website/blog that nobody is seeing
 1. distribute your content
 2. show the world your content is liked (distributed).
 
-HOT: We run an Indiegogo campaign to collect funds for the 2.0 version of this plugin. More social networks(Twitter, Google, LinkedIn) are coming soon. Contribute now and be te first to use it!
+HOT: We run an Indiegogo campaign to collect funds for the 2.0 version of this plugin. More social networks(Twitter, Google, LinkedIn) are coming soon! [Contribute now and be te first to use it!](http://www.indiegogo.com/projects/moresharesforyou-content-sharing-on-autopilot/x/5156698) 
 
 NOTE:You can stay updated with the latest developments on our [Social Exchange](http://www.socialexchangeplugin.com/) plugin page. 
 Please share the love about our work so we know you like it and we'll keep improving it. Thank You!
