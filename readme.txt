@@ -38,7 +38,7 @@ Please share the love about our work so we know you like it and we'll keep impro
 
 1.  Download the MoreSharesForYou plugin file
 2.  Unzip the file into a folder on your hard drive
-3.  Upload the `/social-exchange/` folder to the `/wp-content/plugins/` folder on your site
+3.  Upload the `/social-exchange-plugin/` folder to the `/wp-content/plugins/` folder on your site
 4.  Visit Network Admin -> Plugins and Network Activate it there.
 5.  Alternatively, you can activate this plugin on individual sites by going to the Site Admin -> Plugins menu and activating there.
 
@@ -46,15 +46,22 @@ Please share the love about our work so we know you like it and we'll keep impro
 
 = How many points I spend for one share of my post? =
 
-Currently you spend 5 points to get one share of your post.
+Currently you spend 5 points to get one share of your post, on one Social Network.
 
 = How many points I earn for sharing posts of others? =
 
-Currently you earn 4 points for sharing one post.
+Currently you earn 4 points for sharing one post on one Social Network. If you share the same posts on all 4 networks (Facebook, Twitter, Google, LinkedIn), you'll get 16(4x4) points.
 
-= How will I allocate points for my post? =
+= How will I get my post shared? =
 
-You need to edit your post, set "Allocate new points" to a multiple of 5: 5 points for 1 share, 10 points for 2, 15 for 3, etc.
+You can set a sharing campaign on a post/page level. Just edit your post and set the maximum number of shares you need for that specific post. If the maximum value is reach, your post will be no longer shared.
+Also you can manage your campaigns (Start, Stop, set a Maximum number of shares) more easily from All posts/ All pages interface in your Wordpress Dashboard.
+
+= What if I run out of points? =
+You will not receive anymore shares for your posts. Earn more points by sharing other posts or visit our website [MoreSharesForYou](http://www.MoreSharesForYou.com/) - we award promotional points regularly.
+
+= I've just installed the plugin, but I can't see any SocialMedia icons on my website =
+This plugin is not for showing  social media buttons on your site, but for increasing your shares on social networks. If you want to show them up to your readers, install any social media plugin from the WordPress repository.
 
 
 == Screenshots ==
