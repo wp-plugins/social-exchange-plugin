@@ -59,5 +59,7 @@ You need to edit your post, set "Allocate new points" to a multiple of 5: 5 poin
 
 == Screenshots ==
 
-1. Get Facebook shares for your posts from other users. Allocate 5 points for one share request.
-2. Share other users posts and earn points.
+1. Set the maximum number of shares you want to receive and start the campaign.
+2. An easy way to manage your sharing campaigns.
+3. MoreSharesForYou panel
+4. Share other users posts and earn points.
