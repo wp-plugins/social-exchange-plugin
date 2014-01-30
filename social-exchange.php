@@ -1,11 +1,11 @@
 <?php
 	/*
-		Plugin Name: Social Exchange
-		Plugin URI: http://www.socialexchangeplugin.com/
+		Plugin Name: MoreSharesForYou
+		Plugin URI: http://www.MoreSharesForYou.com/
 		Description: Social exchange plugin for wordpress
 		Version: 1.17
 		Author: Social Exchange Plugin team
-		Author URI: http://www.socialexchangeplugin.com/
+		Author URI: http://www.MoreSharesForYou.com/
 		License: GPL
 	*/
 	$sxpath =  plugin_dir_path(__FILE__ );;
