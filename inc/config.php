@@ -6,7 +6,7 @@
 			$return = 'http://moresharesforyou.com/sx/';
 		break;
 		case 'plugin_url';
-			$return = plugins_url()."/moresharesforyou/";
+			$return = plugins_url()."/social-exchange-plugin/";
 		break;
 		default:
 			$return =  '';
