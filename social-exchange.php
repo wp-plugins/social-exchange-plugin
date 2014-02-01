@@ -3,7 +3,7 @@
 		Plugin Name: MoreSharesForYou
 		Plugin URI: http://www.MoreSharesForYou.com/
 		Description: Social exchange plugin for wordpress
-		Version: 1.18
+		Version: 2.0
 		Author: Social Exchange Plugin team
 		Author URI: http://www.MoreSharesForYou.com/
 		License: GPL
