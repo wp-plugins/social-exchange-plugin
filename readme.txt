@@ -55,7 +55,7 @@ Currently you earn 4 points for sharing one post on one Social Network. If you s
 
 = How will I get my post shared? =
 
-You can set a sharing campaign on a post/page level. Just edit your post and set the maximum number of shares you need for that specific post. If the maximum value is reach, your post will be no longer shared.
+You can set a sharing campaign on a post/page level. Just edit your post and set the maximum number of shares you need for that specific post. If the maximum value is reached, your post will be no longer shared.
 Also you can manage your campaigns (Start, Stop, set a Maximum number of shares) more easily from All posts/ All pages interface in your Wordpress Dashboard.
 
 = What if I run out of points? =
