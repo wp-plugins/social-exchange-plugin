@@ -1,7 +1,7 @@
 === MoreSharesForYou===
 Contributors: Social Exchange
 Donate link: 
-Tags: Facebook, share, like, sharing, social, recommend, post, share, facebook like, facebook post, button, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, more shares for you, moresharesforyou,
+Tags:Facebook,share, like, sharing, social, recommend, post, share, facebook like, facebook post, button, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange,Twitter, Google, Linkedin
 Requires at least: 3.3
 Tested up to: 3.5.1
 Stable tag: trunk
