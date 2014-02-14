@@ -1,4 +1,4 @@
-=== MoreSharesForYou - The Social Exchange Plugin===
+=== MoreSharesForYou - Social Exchange Plugin===
 Contributors: Social Exchange
 Donate link: 
 Tags:Facebook, share, like, sharing, social, recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin
