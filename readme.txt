@@ -3,7 +3,7 @@ Contributors: Social Exchange
 Donate link: 
 Tags:Facebook, share, like, sharing, social, recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin
 Requires at least: 3.3
-Tested up to: 3.5.1
+Tested up to: 3.8.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
