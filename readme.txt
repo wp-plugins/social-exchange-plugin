@@ -1,7 +1,7 @@
 === MoreSharesForYou - Social Exchange Plugin===
 Contributors: Social Exchange
 Donate link: 
-Tags:Facebook, share, like, sharing, social, recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin
+Tags:Facebook, share, like, sharing, social, social media,recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin
 Requires at least: 3.3
 Tested up to: 3.8.1
 Stable tag: trunk
@@ -21,14 +21,14 @@ The plugin is user-friendly and extremely easy to use: just install it and press
 
 We help WordPress users and Social Media Bloggers to get more Likes and Shares through the Social Exchange - a points-based reciprocal system. It works like this: 
 * when you install the plugin we give you FREE points 
-* you spend your points giving them to people sharing your content 
-* you get more points by sharing others content.
+*you spend your points giving them to people sharing your content 
+*you get more points by sharing others content.
 
 IMPORTANT: You should display the Facebook LIKES button on your shared posts and pages so your audience can see on your website the number of Likes. (Facebook adds the likes and the shares into 1 single metric). This is an important social proof indicator for your readers.
 
 EQUALLY IMPORTANT: Facebook and the other social networks "count" your likes/shares in relation to a certain URL. Please make sure you have the final URL Pretty Permalink in place before starting a campaign. Otherwise, if you change the URL later, Facebook will not display your previous like numbers.
 
-It's a WASTE OF MONEY AND TIME to have a good website/blog that nobody is seeing or reading. The MoreSharesForYou Plugin helps you achieve 2 goals: 1. distribute your content 
+It's a WASTE OF MONEY AND TIME to have a good website/blog that nobody is seeing or reading. The MoreSharesForYou Plugin helps you achieve 2 goals: 1. distribute your content, 
 2. show the world your content is liked (distributed).
 
 NOTE:You can stay updated with the latest developments on our [MoreSharesForYou](http://www.MoreSharesForYou.com/) plugin page. 
