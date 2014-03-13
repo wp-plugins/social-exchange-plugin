@@ -56,7 +56,7 @@ function sx_save_options($input){
 				<p>Points available: <b> <?php echo $sxoptions['points']; ?></b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://moresharesforyou.com/get-more-points/" class="sx-get-more">How to get more points?</a></p>
 				 <input type="hidden" name="sx-post-active" id="sx-post-active" value="<?php echo $likes['active']; ?>"/> <input type="hidden"  name="sx-post-done" value="<?php echo intval($likes['done'])  ; ?>"  style="  width: 50px;" />
 				Shares made:  <b><?php echo intval($likes['done'])  ; ?></b><br/>
-				Maximum shares: <?php?>
+				Maximum shares: <?php ?>
 					<?php if($likes['active'] == 'no') : ?>
 					<input type="text" name="sx-post-likes" value="<?php echo intval($likes['created'])  ; ?>"  style="  width: 50px;" />
 					<?php else : ?>
@@ -91,6 +91,22 @@ function sx_save_options($input){
 	}
 	function sx_get_post_likes($id){
 		$settings = array("post"=>get_permalink($id),"site"=>get_site_url());
+		$response = sx_get_response("getPostLikes",$settings);
+		if(intval($response['status']) == 0)
+			return array(
+				"created"=>$response['data']['created'],
+				"done"=>$response['data']['done'],
+				"active"=>$response['data']['active']
+			);
+		  return array(
+				"created"=>0,
+				"done"=>0,
+				"active"=>false
+			);
+	}
+	function sx_get_home_likes(){
+		$settings = array("post"=>get_site_url(),"site"=>get_site_url());
+
 		$response = sx_get_response("getPostLikes",$settings);
 		if(intval($response['status']) == 0)
 			return array(
@@ -195,6 +211,12 @@ function skip_like_callback() {
 						<tr title="<?php echo $result['data']['pages'][0]['name']; ?>" >
 								<td width="80%"><?php echo $result['data']['pages'][0]['name']; ?></td>
 								<td width="10%"><?php echo $result['data']['pages'][0]['html']; ?></td>
+
+
+
+
+
+
 								<td width="10%">
 									<a href="#" class="skip-like">Skip</a>
 								</td>
@@ -365,6 +387,9 @@ function sx_enqueue($hook) {
 		if($post->post_type == 'post' || $post->post_type == 'page' )
 			wp_enqueue_script( 'sx_custom_script_list', sx("plugin_url") . 'js/sxlist.js' );
 	}
+	if($hook == 'toplevel_page_social_exchange'){
+		wp_enqueue_script( 'sx_custom_script_list', sx("plugin_url") . 'js/sxlist.js' );
+	}
     wp_enqueue_script( 'sx_custom_script', sx("plugin_url") . 'js/sxscripts.js' );
     wp_enqueue_script( 'sx_bind-first', sx("plugin_url") . 'js/bind-first.js' );
 }
@@ -390,16 +415,70 @@ function sx_get_posts_data(){
 add_action( 'wp_ajax_sx_get_posts_data', 'sx_get_posts_data' );
 
 function sx_add_post_data(){
+	
 	if(intval($_POST['sn']) > 0)
-	 save_post_data($_POST['id'],$_POST['sn'],$_POST['activate']);
+		save_post_data($_POST['id'],$_POST['sn'],$_POST['activate'],$_POST['main']);
 	die();
+	
 }
-function save_post_data($id,$sn,$activate){
-
-	$settings = array("post"=>get_permalink($id),"site"=>get_site_url(),"likes"=>$sn,"link"=>get_permalink($id),"title"=>get_the_title($id),"active"=>$activate );
-
+add_action( 'wp_ajax_sx_add_post_data', 'sx_add_post_data' );
+function save_post_data($id,$sn,$activate,$main){
+	$campaigns = get_option('sx_active_campaigns');
+	if ($activate == 'yes') {
+		$campaigns[] = $id;
+	}
+	else {
+		$pos = array_search($id,$campaigns);
+		unset($campaigns[$pos]);
+	}
+	update_option('sx_active_campaigns',$campaigns);
+	if ($main == "false") {
+		$settings = array("post"=>get_permalink($id),"site"=>get_site_url(),"likes"=>$sn,"link"=>get_permalink($id),"title"=>get_the_title($id),"active"=>$activate );
+	}
+	else {
+		$settings = array("post"=>get_site_url(),"site"=>get_site_url(),"likes"=>$sn,"link"=>get_site_url(),"title"=>get_bloginfo('name'),"active"=>$activate );
+	}
 	return ( sx_get_response("addPostLikes",$settings));
 
 }
-add_action( 'wp_ajax_sx_add_post_data', 'sx_add_post_data' );
+add_action( 'admin_notices', 'sx_admin_notices' );
+function sx_admin_notices() {
+	global $sxoptions;
+	$points = $sxoptions['points'];
+	if ($points < 5) {
+		$res = sx_get_response('getTotalShares',array('site'=>get_site_url()));
+		$done = $res['data']['done'];
+	?>
+	<div class="update-nag" style="text-align:center">
+	    <p><strong>MoreSharesForYou</strong>:Your pages have been shared <?php echo $done; ?> Times. <br/>You don't have enough points for MoreShares. Please <a href="<?php admin_url('admin.php?page=social_exchange'); ?>">share some pages</a> or <a href="http://moresharesforyou.com/get-more-points/">get some more points</a>.</p>
+	</div>
+	<?php
+	}
+	$campaigns = get_option('sx_active_campaigns');
+	if (empty($campaigns)) {
+	?>
+	<div class="clear">
+	<div class="update-nag">
+	    <p><strong>MoreSharesForYou</strong>: Please start the campaign to have other people share your posts or pages</p>
+	</div>
+	<?php
+	}
+}
+
+function sx_img_exists($url){
+    $ch = curl_init($url);    
+    curl_setopt($ch, CURLOPT_NOBODY, true);
+    curl_exec($ch);
+    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    if($code == 200){
+       $status = true;
+    }else{
+      $status = false;
+    }
+    curl_close($ch);
+   return $status;
+}
+
+
 ?>

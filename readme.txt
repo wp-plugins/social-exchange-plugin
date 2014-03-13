@@ -1,7 +1,7 @@
 === MoreSharesForYou - Social Exchange Plugin===
 Contributors: Social Exchange
 Donate link: 
-Tags:Facebook, share, like, sharing, social, social media,recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin
+Tags:Facebook, share, like, sharing, social, social media,recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin, bookmark button, bookmarking, bookmarks, facebook recommend,google plus, social bookmarking, social shares
 Requires at least: 3.3
 Tested up to: 3.8.1
 Stable tag: trunk
