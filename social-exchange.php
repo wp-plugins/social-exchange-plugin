@@ -2,9 +2,9 @@
 	/*
 		Plugin Name: MoreSharesForYou
 		Plugin URI: http://www.MoreSharesForYou.com/
-		Description: Social exchange plugin for WordPress
+		Description: MoreSharesForYou is a content discovery and promotion tool that gets your content viewed and shared by other people.
 		Version: 2.6
-		Author: Social Exchange Plugin team
+		Author: MoreSharesForYou team
 		Author URI: http://www.MoreSharesForYou.com/
 		License: GPL
 	*/

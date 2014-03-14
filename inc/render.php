@@ -415,14 +415,14 @@ function sx_get_posts_data(){
 add_action( 'wp_ajax_sx_get_posts_data', 'sx_get_posts_data' );
 
 function sx_add_post_data(){
-	
+
 	if(intval($_POST['sn']) > 0)
 		save_post_data($_POST['id'],$_POST['sn'],$_POST['activate'],$_POST['main']);
 	die();
-	
+
 }
 add_action( 'wp_ajax_sx_add_post_data', 'sx_add_post_data' );
-function save_post_data($id,$sn,$activate,$main){
+function save_post_data($id,$sn,$activate,$main = "false"){
 	$campaigns = get_option('sx_active_campaigns');
 	if ($activate == 'yes') {
 		$campaigns[] = $id;
@@ -466,7 +466,7 @@ function sx_admin_notices() {
 }
 
 function sx_img_exists($url){
-    $ch = curl_init($url);    
+    $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_NOBODY, true);
     curl_exec($ch);
     $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
