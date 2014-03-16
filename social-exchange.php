@@ -16,7 +16,7 @@
 	if (function_exists('sx')) {
 		wp_die('More Shares For You - Basic Version cannot be activated. Please deactivate the PRO version first. <br /><br />Back to the WordPress <a href="'.get_admin_url(null, 'plugins.php').'">Plugins page</a>.');
 	}
-	add_option('sx_version','2.6.1');
+	add_option('sx_version','2.6.11');
 	if (get_option('sx_active_campaigns') === FALSE)
 		add_option('sx_active_campaigns',array());
 	require_once "inc/config.php";
