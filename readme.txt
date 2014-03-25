@@ -19,7 +19,7 @@ This is precisely what The MoreSharesForYou Plugin helps you accomplish: **incre
 
 The plugin is user-friendly and extremely easy to use: just install it and press the PLAY button for the campaign to start. Then watch your stats increase.
 
-[youtube http://www.youtube.com/watch?v=OMZFOJbLjiY]
+[youtube https://www.youtube.com/watch?v=t0E846KQMWE]
 
 We help WordPress users and Social Media Bloggers to get more Likes and Shares through the Social Exchange - a points-based reciprocal system. It works like this:
 * when you install the plugin we give you FREE points; 
