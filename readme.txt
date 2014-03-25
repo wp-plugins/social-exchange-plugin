@@ -19,10 +19,12 @@ This is precisely what The MoreSharesForYou Plugin helps you accomplish: **incre
 
 The plugin is user-friendly and extremely easy to use: just install it and press the PLAY button for the campaign to start. Then watch your stats increase.
 
+[youtube http://www.youtube.com/watch?v=OMZFOJbLjiY]
+
 We help WordPress users and Social Media Bloggers to get more Likes and Shares through the Social Exchange - a points-based reciprocal system. It works like this:
-*when you install the plugin we give you FREE points; 
-*you spend your points giving them to people sharing your content; 
-*you get more points by sharing others content.
+* when you install the plugin we give you FREE points; 
+* you spend your points giving them to people sharing your content; 
+* you get more points by sharing others content.
 
 IMPORTANT: You should display the Facebook LIKES button on your shared posts and pages so your audience can see on your website the number of Likes. (Facebook adds the likes and the shares into 1 single metric). This is an important social proof indicator for your readers.
 
