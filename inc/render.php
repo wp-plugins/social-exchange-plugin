@@ -217,6 +217,7 @@ function skip_like_callback() {
 
 
 
+
 								<td width="10%">
 									<a href="#" class="skip-like">Skip</a>
 								</td>
@@ -359,8 +360,8 @@ function confirm_page_share_callback() {
 add_filter('manage_posts_columns', 'sx_columns');
 add_filter('manage_pages_columns', 'sx_columns');
 function sx_columns($columns) {
-   	$first = array_slice($columns,1,1,true);
-	$last = array_slice($columns, 2,count($columns) - 3,true);
+   	$first = array_slice($columns,0,2,true);
+	$last = array_slice($columns, 2,count($columns) - 2,true);
 
     return array_merge($first,array("sx_enable"=>"Enable  <br/>Campaign","sx_need"=>"Maximum <br/> shares","sx_done"=>"Done <br/> shares"),$last);
 }
