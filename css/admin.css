@@ -1,0 +1,33 @@
+.sx_need a.sx-save-need-list{
+	display:none ;
+}
+.sx-list-hide{
+	display:none;
+}
+.sx-share-need-list{
+	width:60px;
+}
+
+.sx-pause-inactive{ 
+	background:url(../images/pause-icon-green-mini.png) transparent !important;
+	cursor:pointer;
+}
+.sx-pause-active{ 
+	background:url(../images/pause-icon-grey-mini.png) transparent  !important; 
+}
+.sx-play-inactive{ 
+	background:url(../images/play-icon-green-mini.png) transparent  !important;
+	cursor:pointer;
+}
+.sx-play-active{ 
+	background:url(../images/play-icon-grey-mini.png)  transparent !important; 
+}
+.campaign-btn{
+	border:none;
+	float:left;
+	text-indent:-9999999;
+	font-size:0px;
+	display:block;
+	width:16px;
+	height:16px;
+}

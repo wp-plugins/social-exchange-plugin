@@ -1,63 +1,0 @@
-#sx-container{
-
-	margin:auto;
-	padding:20px;
-	font-family:arial;
-}
-.sx-row{
-	width:100%;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-.sx-left{
-	float:left;
-	margin-right:20px;
-}
-.sx-right{
-	float:right;
-	margin-left:20px;
-}
-.sx-clear{
-	clear:both;
-}
-.sx-title{
-	font-size:20px; 
-	color:#21759B;
-	margin-bottom:20px;
-	margin-top:10px;
-}
-.sx-table{
-	width:100%;
-}
-.sx-box{
-	border:1px solid;
-	border-radius:5px;
-	padding:10px;
-}.fb-like-btn{	display:block;	width:76px;	height:36px;	background:url(../images/like.png);	cursor:pointer;}.fb-share-btn{	display:block;	width:76px;	height:36px;	background:url(../images/share.png);	cursor:pointer;}.skip-like,.skip-share{	font-size:15px;	font-weight:bold;	color:#333333;	text-decoration:none;	padding: 15px;
-}.like-loader, .share-loader{	display:none;	background:url(../images/loader.gif) no-repeat center center;	height:40px;	width:100%;}
-fieldset.sx_box{
-max-width: 800px;
-min-width: 500px;
-background: #fcfcfc;
-border: 1px solid #8E8E8E;
-font-size: 1.1em;
-margin: 10px;
-padding: 1em;
-font-family: Arial,Verdana,Helvetica,sans-serif;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-box-shadow: 0 5px 9px -6px #222;}
-
-fieldset.sx_box legend{
-background: #D4EB99 repeat-x top left;
-border: 1px solid #364A14;
-font-weight: 700;
-margin: 0;
-padding: .2em .5em;
-line-height: 20px;
-text-align: left;
-color: #333;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;}
