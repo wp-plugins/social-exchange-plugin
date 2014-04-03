@@ -80,3 +80,8 @@ This plugin is not for showing  social media buttons on your site, but for incre
 2. An easy way to manage your sharing campaigns.
 3. MoreSharesForYou panel
 4. Share other users posts and earn points.
+
+== Changelog ==
+
+= 2.6.20 - 2014-04-03 =
+* Fixed missing date field in Screen Options
