@@ -366,6 +366,8 @@ function sx_columns($columns) {
     return array_merge($first,array("sx_enable"=>"Enable  <br/>Campaign","sx_need"=>"Maximum <br/> shares","sx_done"=>"Done <br/> shares"),$last);
 }
 add_action('manage_posts_custom_column',  'sx_show_columns');
+add_action('manage_pages_custom_column',  'sx_show_columns');
+
 function sx_show_columns($name) {
     global $post;
     switch ($name) {

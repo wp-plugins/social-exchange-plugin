@@ -3,7 +3,7 @@ Contributors: Social Exchange
 Donate link: 
 Tags:Facebook, share, like, sharing, social, social media,recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin, bookmark button, bookmarking, bookmarks, facebook recommend,google plus, social bookmarking, social shares
 Requires at least: 3.3
-Tested up to: 3.8.1
+Tested up to: 3.8.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -85,3 +85,6 @@ This plugin is not for showing  social media buttons on your site, but for incre
 
 = 2.6.20 - 2014-04-03 =
 * Fixed missing date field in Screen Options
+
+= 2.6.25 - 2014-04-14 =
+* Fixed disabled campaign buttons issue in Edit All Pages
