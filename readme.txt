@@ -83,8 +83,13 @@ This plugin is not for showing  social media buttons on your site, but for incre
 
 == Changelog ==
 
-= 2.6.20 - 2014-04-03 =
-* Fixed missing date field in Screen Options
+= 2.7 - 2014-04-24 =
+* Added newsletter options for free points
+* Optimizing the code sx code
 
 = 2.6.25 - 2014-04-14 =
 * Fixed disabled campaign buttons issue in Edit All Pages
+
+= 2.6.20 - 2014-04-03 =
+* Fixed missing date field in Screen Options
+

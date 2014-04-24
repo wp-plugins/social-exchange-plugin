@@ -25,22 +25,36 @@ function sx_save_options($input){
 		return $input;
 }
 	function sx_main_page(){
-			 global $sxpath;
-			 global $sxoptions;
-			 $datas = get_sxdata();
+		global $sxpath;
+		global $sxoptions;
+		$datas = get_sxdata();
 
-			 $pagesl = array() ;
-			 $artl = array();
-			 if(!empty($datas)){
-				$artl  = $datas['articles'];
-			 }
-			 require_once $sxpath."/layouts/main_page.php";
+		$pagesl = array() ;
+		$artl = array();
+		if(!empty($datas)){
+			$artl  = $datas['articles'];
+		}
+
+		// checkEmail API CALL
+		$email = sx_get_response("checkEmail",array("site"=>get_site_url()));
+		$subscribed = $email['data']['email'];
+		if (!empty($subscribed)) {
+			require_once $sxpath."/layouts/main_page.php";
+			//Still show form
+			if ($subscribed == 'no') 
+				require_once $sxpath."/layouts/optin_form.php";
+		}
+		else {
+			require_once $sxpath."/layouts/optin_form.php";
+		}
+
+		
 	}
 	function get_sxdata(){
-			$data = sx_get_response("getPagesArticles",array("site"=>get_site_url()));
-			if($data['status'] == 0)
-				return $data['data'];
-			return false;
+		$data = sx_get_response("getPagesArticles",array("site"=>get_site_url()));
+		if($data['status'] == 0)
+			return $data['data'];
+		return false;
 	}
 	add_action( 'admin_init', 'sx_metabox', 1 );
 	function sx_metabox(){
@@ -48,46 +62,53 @@ function sx_save_options($input){
 		add_meta_box( "socia-exchange-widget", "MoreSharesForYou", "sx_post_widget", "page", "side", "high" );
 	}
 	function sx_post_widget($post){
-			 global $sxoptions;
-				wp_nonce_field( plugin_basename( __FILE__ ), 'sx_noncename' );
-				$likes = sx_get_post_likes($post->ID);
-				wp_enqueue_style( 'sx-stylesheet', sx("plugin_url")."css/style.css" );
-			 ?>
-				<p>Points available: <b> <?php echo $sxoptions['points']; ?></b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://moresharesforyou.com/get-more-points/" class="sx-get-more">How to get more points?</a></p>
-				 <input type="hidden" name="sx-post-active" id="sx-post-active" value="<?php echo $likes['active']; ?>"/> <input type="hidden"  name="sx-post-done" value="<?php echo intval($likes['done'])  ; ?>"  style="  width: 50px;" />
-				Shares made:  <b><?php echo intval($likes['done'])  ; ?></b><br/>
-				Maximum shares: <?php ?>
-					<?php if($likes['active'] == 'no') : ?>
-					<input type="text" name="sx-post-likes" value="<?php echo intval($likes['created'])  ; ?>"  style="  width: 50px;" />
-					<?php else : ?>
-					<b><?php echo intval($likes['created'])  ; ?></b>
-					<input type="hidden"  name="sx-post-likes" value="<?php echo intval($likes['created'])  ; ?>"  style="  width: 50px;" />
-					<?php endif; ?>
-				 </p>
-				 <p><div   id="sx-error-label"> </div></p>
-				 <p><div   id="sx-notice-label"> </div></p>
-				<p>
-				 <?php if($sxoptions['premium'] == 'yes') { ?>
-					<div class="sx-networks"><a class="sx-fb-btn"></a><a  class="sx-tw-btn-active" ></a><a  class="sx-gp-btn-active"></a><a  class="sx-ln-btn-active"></a><div class="clear"></div></div>
+		global $sxpath;
+		global $sxoptions;
+		wp_nonce_field( plugin_basename( __FILE__ ), 'sx_noncename' );
+		$likes = sx_get_post_likes($post->ID);
+		wp_enqueue_style( 'sx-stylesheet', sx("plugin_url")."css/style.css" );
 
-				 <?php } else { ?>
-					<div class="sx-networks"><a class="sx-fb-btn"></a><a  class="sx-tw-btn" ></a><a  class="sx-gp-btn"></a><a  class="sx-ln-btn"></a><div class="clear"></div> <a class="sx-unlock" href=" http://moresharesforyou.com/pro/">Unlock all networks</a></div>
+		//checkEmail API CALL
+		$email = sx_get_response("checkEmail",array("site"=>get_site_url()));
+		$subscribed = $email['data']['email'];
+		if (empty($subscribed)) {
+			include $sxpath."/layouts/optin_form_content.php";
+			return;
+		}
+		?>
+		<p>Points available: <b> <?php echo $sxoptions['points']; ?></b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://moresharesforyou.com/get-more-points/" class="sx-get-more">How to get more points?</a></p>
+		<input type="hidden" name="sx-post-active" id="sx-post-active" value="<?php echo $likes['active']; ?>"/> <input type="hidden"  name="sx-post-done" value="<?php echo intval($likes['done'])  ; ?>"  style="  width: 50px;" />
+		Shares made:  <b><?php echo intval($likes['done'])  ; ?></b><br/>
+		Maximum shares: <?php ?>
+		<?php if($likes['active'] == 'no') : ?>
+		<input type="text" name="sx-post-likes" value="<?php echo intval($likes['created'])  ; ?>"  style="  width: 50px;" />
+		<?php else : ?>
+		<b><?php echo intval($likes['created'])  ; ?></b>
+		<input type="hidden"  name="sx-post-likes" value="<?php echo intval($likes['created'])  ; ?>"  style="  width: 50px;" />
+		<?php endif; ?>
+		</p>
+		<p><div   id="sx-error-label"> </div></p>
+		<p><div   id="sx-notice-label"> </div></p>
+		<p>
+		<?php if($sxoptions['premium'] == 'yes') { ?>
+			<div class="sx-networks"><a class="sx-fb-btn"></a><a  class="sx-tw-btn-active" ></a><a  class="sx-gp-btn-active"></a><a  class="sx-ln-btn-active"></a><div class="clear"></div></div>
+		<?php } else { ?>
+			<div class="sx-networks"><a class="sx-fb-btn"></a><a  class="sx-tw-btn" ></a><a  class="sx-gp-btn"></a><a  class="sx-ln-btn"></a><div class="clear"></div> <a class="sx-unlock" href=" http://moresharesforyou.com/pro/">Unlock all networks</a></div>
+		<?php } ?>
 
-				<?php } ?>
+		<div class="campaign-wrapper">
+		<a    <?php if($likes['active'] == 'no') : ?> title="Campaign is stopped" <?php endif; ?> class="campaign-btn post-page <?php if($likes['active'] == 'yes') : ?>sx-play-active<?php else: ?> sx-play-inactive<?php endif; ?>"  data-value="yes" value=""></a>
+		<a  <?php if($likes['active'] == 'yes') : ?> title="Campaign is running" <?php endif; ?> class=" post-page <?php if($likes['active'] == 'yes') : ?>sx-pause-inactive<?php else: ?> sx-pause-active<?php endif; ?> campaign-btn"  data-value="no" value="" ></a>
 
-				<div class="campaign-wrapper">
-					<a    <?php if($likes['active'] == 'no') : ?> title="Campaign is stopped" <?php endif; ?> class="campaign-btn post-page <?php if($likes['active'] == 'yes') : ?>sx-play-active<?php else: ?> sx-play-inactive<?php endif; ?>"  data-value="yes" value=""></a>
-				 <a  <?php if($likes['active'] == 'yes') : ?> title="Campaign is running" <?php endif; ?> class=" post-page <?php if($likes['active'] == 'yes') : ?>sx-pause-inactive<?php else: ?> sx-pause-active<?php endif; ?> campaign-btn"  data-value="no" value="" ></a>
+		<div class="sx-clear"></div>
+		<?php if($likes['active'] == 'yes') : ?>
+			Campaign is running
+		<?php else: ?>
+			Campaign is paused
+		<?php endif; ?>
+		</div><div class="sx-clear"></div></p>
 
-				 <div class="sx-clear"></div>
-				 <?php if($likes['active'] == 'yes') : ?>
-					Campaign is running
-				 <?php else: ?>
-					Campaign is paused
-				 <?php endif; ?>
-				 </div><div class="sx-clear"></div></p>
-
-			 <?php
+		<?php
 	}
 	function sx_get_post_likes($id){
 		$settings = array("post"=>get_permalink($id),"site"=>get_site_url());
@@ -383,18 +404,27 @@ function sx_show_columns($name) {
     }
 }
 function sx_enqueue($hook) {
-    wp_register_style( 'sx_wp_admin_css', sx("plugin_url") . 'css/admin.css', false, '1.0.0' );
-	wp_enqueue_style( 'sx_wp_admin_css' );
 	global $post;
+
+	wp_register_style( 'sx_wp_admin_css', sx("plugin_url") . 'css/admin.css', false, '1.0.0' );
+	wp_enqueue_style( 'sx_wp_admin_css' );
+
 	if($hook == 'edit.php'){
-		if($post->post_type == 'post' || $post->post_type == 'page' )
+		if($post->post_type == 'post' || $post->post_type == 'page' ) {
 			wp_enqueue_script( 'sx_custom_script_list', sx("plugin_url") . 'js/sxlist.js' );
+		}
+	}
+	if($hook == 'post.php'){
+		if($post->post_type == 'post' || $post->post_type == 'page' ) {
+			wp_enqueue_script( 'sx_optin', sx("plugin_url") . 'js/sxoptin.js' );
+		}
 	}
 	if($hook == 'toplevel_page_social_exchange'){
 		wp_enqueue_script( 'sx_custom_script_list', sx("plugin_url") . 'js/sxlist.js' );
+		wp_enqueue_script( 'sx_optin', sx("plugin_url") . 'js/sxoptin.js' );
 	}
-    wp_enqueue_script( 'sx_custom_script', sx("plugin_url") . 'js/sxscripts.js' );
-    wp_enqueue_script( 'sx_bind-first', sx("plugin_url") . 'js/bind-first.js' );
+	wp_enqueue_script( 'sx_custom_script', sx("plugin_url") . 'js/sxscripts.js' );
+	wp_enqueue_script( 'sx_bind-first', sx("plugin_url") . 'js/bind-first.js' );
 }
 add_action( 'admin_enqueue_scripts', 'sx_enqueue' );
 function sx_get_posts_data(){
@@ -468,19 +498,29 @@ function sx_admin_notices() {
 	}
 }
 
-function sx_img_exists($url){
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_NOBODY, true);
-    curl_exec($ch);
-    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+add_action( 'wp_ajax_sx_optin','sx_optin');
+function sx_optin() {
+	$email = $_POST['sx_ajax_email'];
 
-    if($code == 200){
-       $status = true;
-    }else{
-      $status = false;
-    }
-    curl_close($ch);
-   return $status;
+	//Store Email value to remote server
+	$res = sx_get_response('storeEmail',array('site'=>get_site_url(),'email'=>$email));
+
+	die();
+}
+
+function sx_img_exists($url){
+	$ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_NOBODY, true);
+	curl_exec($ch);
+	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+	if($code == 200){
+	$status = true;
+	}else{
+	$status = false;
+	}
+	curl_close($ch);
+	return $status;
 }
 
 
