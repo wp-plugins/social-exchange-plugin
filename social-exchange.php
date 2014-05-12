@@ -3,7 +3,7 @@
 		Plugin Name: MoreSharesForYou
 		Plugin URI: http://www.MoreSharesForYou.com/
 		Description: MoreSharesForYou is a content discovery and promotion tool that gets your content viewed and shared by other people.
-		Version: 2.7.1
+		Version: 2.7.2
 		Author: MoreSharesForYou team
 		Author URI: http://www.MoreSharesForYou.com/
 		License: GPL
