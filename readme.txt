@@ -83,12 +83,15 @@ This plugin is not for showing  social media buttons on your site, but for incre
 
 == Changelog ==
 
+= 2.7.2 - 2014-05-12 =
+* Fixing wrong version displayed after update
+
 = 2.7.1 - 2014-05-02 =
 * Fixing campaign cannot be started after opt-in skip
 
 = 2.7 - 2014-04-24 =
 * Added newsletter options for free points
-* Optimizing the code sx code
+* Optimizing the sx code
 
 = 2.6.25 - 2014-04-14 =
 * Fixed disabled campaign buttons issue in Edit All Pages
