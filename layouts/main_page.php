@@ -14,7 +14,7 @@ function showSoader(){
 	jQuery(".shares-result").html('');
 	jQuery(".share-loader").fadeIn(200,function(){
 	});
-}  
+}
 
 function sxRefreshData(){
 	var parent = jQuery("#sx-share-row");
@@ -26,37 +26,42 @@ function sxRefreshData(){
 						data:{action:"reload_data"},
 						dataType:"json",
 						success:function(r){
-							jQuery(".share-loader").fadeOut(100,function(){ 
+							jQuery(".share-loader").fadeOut(100,function(){
 								jQuery("#sxpoints").html(r.points);
 								jQuery(".shares-result").html(r.next);
 							});
-										
+
 						}
 					});
 				});
 			 }) ;
-} 
+}
 jQuery(document).ready(function(){
-	 
-	jQuery(".skip-share").on("click",function(){
-			var parent = jQuery("#sx-share-row");
-			parent.fadeOut(200,function(){
-				var id = parent.attr("title");
-				jQuery(".share-loader").fadeIn(300,function(){
-						jQuery.ajax({
-						url:ajaxurl,
-						data:{action:"skip_share",id:id},
-						success:function(r){
-								jQuery(".share-loader").fadeOut(100,function(){
-									jQuery(".shares-result").html(r);
-								});
-						}
-				});
-				})
+
+	jQuery(".skip-share").on("click",SkipShare);
+
+	function SkipShare() {
+		var parent = jQuery("#sx-share-row");
+		parent.fadeOut(200,function(){
+			var id = parent.attr("title");
+			jQuery(".share-loader").fadeIn(300,function(){
+					jQuery.ajax({
+					url:ajaxurl,
+					data:{action:"skip_share",id:id},
+					success:function(r){
+							jQuery(".share-loader").fadeOut(100,function(){
+								jQuery(".shares-result").html(r);
+								jQuery(".skip-share").on("click",SkipShare);
+							});
+					}
 			});
+			})
+		});
 		return false;
-	});
+	}
 })
+
+
 </script>
 <div id="sx-container">
 <?php
@@ -73,7 +78,7 @@ jQuery(document).ready(function(){
 <fieldset class="sx_box"><legend>Plugin Info</legend>
 		<div class="sx-left">
 				MoreSharesForYou <strong>v<?php echo get_option('sx_version'); ?></strong><br/>
-				Total shares made: <?php 
+				Total shares made: <?php
 					$res = sx_get_response('getTotalShares',array('site'=>get_site_url()));
 					echo $res['data']['done']; ?><br/>
 				Website: <a href="http://moresharesforyou.com">MoreSharesForYou</a><br/>
@@ -84,7 +89,7 @@ jQuery(document).ready(function(){
 					if (sx_img_exists("http://moresharesforyou.com/panelbanner.jpg")) {
 					    ?><a href="http://www.moresharesforyou.com/info"><img src="http://www.moresharesforyou.com/panelbanner.jpg" alt="" /></a><br/><?php
 					}
-				?>					
+				?>
 		</div>
 </fieldset>
 		<div class="sx-clear"> </div>
@@ -109,9 +114,9 @@ jQuery(document).ready(function(){
 				<tbody>
 					<tr>
 					<td width ="25%"><?php echo get_site_url();?></td>
-					<td width ="25%"><p>Shares made:  <b><?php echo intval($likes['done'])  ; ?></b><br/>
+					<td width ="25%"><p>Shares made:  <span id="sxsd_0"><b><?php echo intval($likes['done'])  ; ?></b></span><br/>
 						Maximum shares: <?php ?>
-							<?php 
+							<?php
 								if($likes['active'] == 'no') {
 									$display1="inline";
 									$display2="none";
@@ -134,8 +139,8 @@ jQuery(document).ready(function(){
 					</td>
 					<td width ="25%"><div class="main-campaign-wrapper aligncenter" id="sxen_0">
 							<input type="hidden" class="sx-activate-campaign-list" value="0" />
-							<a    <?php if($likes['active'] == 'no') : ?> title="Campaign is stopped" <?php endif; ?> class="main-page campaign-btn <?php if($likes['active'] == 'yes') : ?>sx-play-active<?php else: ?> sx-play-inactive<?php endif; ?>"  data-value="yes" value=""></a>
-						 <a  <?php if($likes['active'] == 'yes') : ?> title="Campaign is running" <?php endif; ?> class="main-page <?php if($likes['active'] == 'yes') : ?>sx-pause-inactive<?php else: ?> sx-pause-active<?php endif; ?> campaign-btn"  data-value="no" value="" ></a>
+							<a    <?php if($likes['active'] == 'no') : ?> title="Start the campaign" <?php endif; ?> class="main-page campaign-btn <?php if($likes['active'] == 'yes') : ?>sx-play-active<?php else: ?> sx-play-inactive<?php endif; ?>"  data-value="yes" value=""></a>
+						 <a  <?php if($likes['active'] == 'yes') : ?> title="Pause the campaign" <?php endif; ?> class="main-page <?php if($likes['active'] == 'yes') : ?>sx-pause-inactive<?php else: ?> sx-pause-active<?php endif; ?> campaign-btn"  data-value="no" value="" ></a>
 
 						</div><div class="clear"></div>
 						<span id="sxcmp">Campaign is <?php echo $campaign;?></span>
@@ -150,12 +155,15 @@ jQuery(document).ready(function(){
 							<div class="sx-network"><a class="sx-fb-btn"></a><a  class="sx-tw-btn" ></a><a  class="sx-gp-btn"></a><a  class="sx-ln-btn"></a><div class="clear"></div> <a class="sx-unlock" href=" http://moresharesforyou.com/pro/">Unlock all networks</a></div>
 
 						<?php } ?>
+					<br/><hr/>
+					<p>
+						<a href='<?php echo 'http://www.moresharesforyou.com/URL/'.get_bloginfo('url'); ?>' target="_blank">Check my Social stats</a>
 					</p>
 					</td>
 				</tr>
 			</tbody>
 			</table>
-	</div> 
+	</div>
 </fieldset>
 <fieldset class="sx_box"><legend>Gain points by sharing other posts</legend>
 	<div class="sx-box">
@@ -179,7 +187,7 @@ jQuery(document).ready(function(){
 				</table>
 				<div class="share-loader"></div>
 			</div>
-	</div> 
+	</div>
 </fieldset>
 
 

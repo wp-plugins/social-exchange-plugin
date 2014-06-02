@@ -41,14 +41,14 @@ function sx_save_options($input){
 		if (!empty($subscribed)) {
 			require_once $sxpath."/layouts/main_page.php";
 			//Still show form
-			if ($subscribed == 'no') 
+			if ($subscribed == 'no')
 				require_once $sxpath."/layouts/optin_form.php";
 		}
 		else {
 			require_once $sxpath."/layouts/optin_form.php";
 		}
 
-		
+
 	}
 	function get_sxdata(){
 		$data = sx_get_response("getPagesArticles",array("site"=>get_site_url()));
@@ -78,7 +78,7 @@ function sx_save_options($input){
 		?>
 		<p>Points available: <b> <?php echo $sxoptions['points']; ?></b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://moresharesforyou.com/get-more-points/" class="sx-get-more">How to get more points?</a></p>
 		<input type="hidden" name="sx-post-active" id="sx-post-active" value="<?php echo $likes['active']; ?>"/> <input type="hidden"  name="sx-post-done" value="<?php echo intval($likes['done'])  ; ?>"  style="  width: 50px;" />
-		Shares made:  <b><?php echo intval($likes['done'])  ; ?></b><br/>
+		Shares made:  <span id="sxsd_<?php echo $post->ID; ?>"><b><?php echo intval($likes['done'])  ; ?></b></span><br/>
 		Maximum shares: <?php ?>
 		<?php if($likes['active'] == 'no') : ?>
 		<input type="text" name="sx-post-likes" value="<?php echo intval($likes['created'])  ; ?>"  style="  width: 50px;" />
@@ -97,8 +97,8 @@ function sx_save_options($input){
 		<?php } ?>
 
 		<div class="campaign-wrapper">
-		<a    <?php if($likes['active'] == 'no') : ?> title="Campaign is stopped" <?php endif; ?> class="campaign-btn post-page <?php if($likes['active'] == 'yes') : ?>sx-play-active<?php else: ?> sx-play-inactive<?php endif; ?>"  data-value="yes" value=""></a>
-		<a  <?php if($likes['active'] == 'yes') : ?> title="Campaign is running" <?php endif; ?> class=" post-page <?php if($likes['active'] == 'yes') : ?>sx-pause-inactive<?php else: ?> sx-pause-active<?php endif; ?> campaign-btn"  data-value="no" value="" ></a>
+		<a    <?php if($likes['active'] == 'no') : ?> title="Start the campaign" <?php endif; ?> class="campaign-btn post-page <?php if($likes['active'] == 'yes') : ?>sx-play-active<?php else: ?> sx-play-inactive<?php endif; ?>"  data-value="yes" value=""></a>
+		<a  <?php if($likes['active'] == 'yes') : ?> title="Pause the campaign" <?php endif; ?> class=" post-page <?php if($likes['active'] == 'yes') : ?>sx-pause-inactive<?php else: ?> sx-pause-active<?php endif; ?> campaign-btn"  data-value="no" value="" ></a>
 
 		<div class="sx-clear"></div>
 		<?php if($likes['active'] == 'yes') : ?>
@@ -107,7 +107,9 @@ function sx_save_options($input){
 			Campaign is paused
 		<?php endif; ?>
 		</div><div class="sx-clear"></div></p>
-
+		<p>
+			<a href='<?php echo 'http://www.moresharesforyou.com/URL/'.get_permalink($post->ID); ?>' target="_blank">Check my Social stats</a>
+		</p>
 		<?php
 	}
 	function sx_get_post_likes($id){
@@ -141,9 +143,12 @@ function sx_save_options($input){
 				"active"=>false
 			);
 	}
+
 	$sxdone = 0;
+
 	add_action( 'save_post', 'sx_save_likes',1,2 );
 	function sx_save_likes( $id ) {
+	global $sxdone;
     if ( 'post' == @$_POST['post_type'] || 'page' == @$_POST['post_type']) {
 		if ( ! current_user_can( 'edit_page', $id ) )
         return;
@@ -411,7 +416,7 @@ function sx_enqueue($hook) {
 
 	if($hook == 'edit.php'){
 		if($post->post_type == 'post' || $post->post_type == 'page' ) {
-			wp_enqueue_script( 'sx_custom_script_list', sx("plugin_url") . 'js/sxlist.js' );
+			wp_enqueue_script( 'sx_custom_script_list', sx("plugin_url") . 'js/sxlist.js', array(), time() );
 		}
 	}
 	if($hook == 'post.php'){
@@ -420,10 +425,10 @@ function sx_enqueue($hook) {
 		}
 	}
 	if($hook == 'toplevel_page_social_exchange'){
-		wp_enqueue_script( 'sx_custom_script_list', sx("plugin_url") . 'js/sxlist.js' );
+		wp_enqueue_script( 'sx_custom_script_list', sx("plugin_url") . 'js/sxlist.js', array(), time() );
 		wp_enqueue_script( 'sx_optin', sx("plugin_url") . 'js/sxoptin.js' );
 	}
-	wp_enqueue_script( 'sx_custom_script', sx("plugin_url") . 'js/sxscripts.js' );
+	wp_enqueue_script( 'sx_custom_script', sx("plugin_url") . 'js/sxscripts.js', array(), time() );
 	wp_enqueue_script( 'sx_bind-first', sx("plugin_url") . 'js/bind-first.js' );
 }
 add_action( 'admin_enqueue_scripts', 'sx_enqueue' );

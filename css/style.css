@@ -8,7 +8,7 @@
 .sx-clear{	clear:both;}.sx-title{	font-size:20px; 	color:#21759B;	margin-bottom:20px;	margin-top:10px;}
 .sx-table{	width:100%;}.sx-box{	border:1px solid;	border-radius:5px;	padding:10px;}
 .fb-like-btn{	display:block;	width:76px;	height:36px;	background:url(../images/like.png);	cursor:pointer;}
-.fb-share-btn{	display:block;	width:76px;	height:36px;	background:url(../images/share.png);	cursor:pointer;}
+.fb-share-btn{	display:block;	width:96px;  height:36px;	background:url(../images/share.png);	cursor:pointer;}
 .skip-like,.skip-share{	font-size:15px;	font-weight:bold;	color:#333333;	text-decoration:none;	padding: 15px;}
 .like-loader, .share-loader{	display:none;	background:url(../images/loader.gif) no-repeat center center;	height:40px;	width:100%;}
 .sx-fb-btn{	background:url(../images/facebook_16.png) no-repeat center center;	display:block;	width:16px;	height:16px;	float:left;	margin-right:2px;}

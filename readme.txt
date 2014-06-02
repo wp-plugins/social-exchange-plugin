@@ -1,7 +1,7 @@
 === MoreSharesForYou - Social Exchange Plugin===
 Contributors: Social Exchange
 Donate link: 
-Tags:Facebook, share, like, sharing, social, social media,recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin, bookmark button, bookmarking, bookmarks, facebook recommend,google plus, social bookmarking, social shares, moresharesforyou, more shares for you
+Tags:Facebook, share, like, sharing, social, social media,recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin, bookmark button, bookmarking, bookmarks, facebook recommend,google plus, social bookmarking, social shares, moresharesforyou, more shares for you, SEO, SERP, traffic
 Requires at least: 3.3
 Tested up to: 3.8.2
 Stable tag: trunk
@@ -12,10 +12,14 @@ Get instant Facebook shares for your WordPress posts
 
 == Description ==
 
+The MoreSharesForYou Plugin helps you achieve 4 goals:
 
-Do you dream of your content being shared by others?
+1.    share and distribute your content: **the discovery effect**
+2.    show the world your content is liked (distributed): **the social proof effect**
+3.    improve your SEO efforts. Your SERP results will increase: **the SEO effect**
+4.    generate new traffic, both directly and from Facebook users: **the traffic effect**
 
-This is precisely what The MoreSharesForYou Plugin helps you accomplish: **increase the number of Facebook Likes and Shares** of your posts and pages. Through an ingenious system of content discovery and cross-promotion this plugin is your best WordPress friend when it comes to quickly grow your social-proof button counters, right after publishing your new posts.
+MoreSharesForYou Plugin helps you **increasing the number of Facebook Likes and Shares** of your posts and pages. Through an ingenious system of content discovery and cross-promotion this plugin is your best WordPress friend when it comes to quickly grow your social-proof button counters, right after publishing your new posts.
 
 The plugin is user-friendly and extremely easy to use: just install it and press the PLAY button for the campaign to start. Then watch your stats increase.
 
@@ -82,6 +86,13 @@ This plugin is not for showing  social media buttons on your site, but for incre
 4. Share other users posts and earn points.
 
 == Changelog ==
+
+= 2.8.0 - 2014-06-02 =
+* Adding new feature -  checking URL share status(http://moresharesforyou.com/URL)
+* Fixing skip the URLs in dashboard panel
+* Fixing campaign not pausing
+* Fixing blank page when sharing posts
+
 
 = 2.7.2 - 2014-05-12 =
 * Fixing wrong version displayed after update
