@@ -87,8 +87,8 @@ This plugin is not for showing  social media buttons on your site, but for incre
 
 == Changelog ==
 
-= 2.8.0 - 2014-06-02 =
-* Adding new feature -  checking URL share status(http://moresharesforyou.com/URL)
+= 2.9.0 - 2014-06-02 =
+* Adding new feature -  checking URL share status (http://moresharesforyou.com/URL/)
 * Fixing skip the URLs in dashboard panel
 * Fixing campaign not pausing
 * Fixing blank page when sharing posts
