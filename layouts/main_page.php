@@ -26,39 +26,41 @@ function sxRefreshData(){
 						data:{action:"reload_data"},
 						dataType:"json",
 						success:function(r){
-							jQuery(".share-loader").fadeOut(100,function(){
+							jQuery(".share-loader").fadeOut(100,function(){ 
 								jQuery("#sxpoints").html(r.points);
 								jQuery(".shares-result").html(r.next);
+								jQuery(".skip-share").on("click",SkipShare);
 							});
-
+										
 						}
 					});
 				});
 			 }) ;
+} 
+function SkipShare() {
+	var parent = jQuery("#sx-share-row");
+	parent.fadeOut(200,function(){
+		var id = parent.attr("title");
+		jQuery(".share-loader").fadeIn(300,function(){
+				jQuery.ajax({
+				url:ajaxurl,
+				data:{action:"skip_share",id:id},
+				success:function(r){
+						jQuery(".share-loader").fadeOut(100,function(){
+							jQuery(".shares-result").html(r);
+							jQuery(".skip-share").on("click",SkipShare);
+						});
+				}
+		});
+		})
+	});
+	return false;
 }
 jQuery(document).ready(function(){
-
+	 
 	jQuery(".skip-share").on("click",SkipShare);
 
-	function SkipShare() {
-		var parent = jQuery("#sx-share-row");
-		parent.fadeOut(200,function(){
-			var id = parent.attr("title");
-			jQuery(".share-loader").fadeIn(300,function(){
-					jQuery.ajax({
-					url:ajaxurl,
-					data:{action:"skip_share",id:id},
-					success:function(r){
-							jQuery(".share-loader").fadeOut(100,function(){
-								jQuery(".shares-result").html(r);
-								jQuery(".skip-share").on("click",SkipShare);
-							});
-					}
-			});
-			})
-		});
-		return false;
-	}
+	
 })
 
 

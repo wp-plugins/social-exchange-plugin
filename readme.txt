@@ -87,6 +87,9 @@ This plugin is not for showing  social media buttons on your site, but for incre
 
 == Changelog ==
 
+= 2.9.1 - 2014-06-03 =
+* Resolving Skip URL exception after closing share screen
+
 = 2.9.0 - 2014-06-02 =
 * Adding new feature -  checking URL share status (http://moresharesforyou.com/URL/)
 * Fixing skip the URLs in dashboard panel
