@@ -108,7 +108,7 @@ function sx_save_options($input){
 		<?php endif; ?>
 		</div><div class="sx-clear"></div></p>
 		<p>
-			<a href='<?php echo 'http://www.moresharesforyou.com/URL/'.get_permalink($post->ID); ?>' target="_blank">Check my Social stats</a>
+			<a href='<?php echo 'http://www.moresharesforyou.com/URL/'.get_permalink($post->ID); ?>' target="_blank"><div class="sx-stats-btn"></div>Check my Social stats</a>
 		</p>
 		<?php
 	}

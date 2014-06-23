@@ -30,3 +30,4 @@ fieldset.sx_box legend{background: #D4EB99 repeat-x top left;border: 1px solid #
 .sx-networks{	float:left;	width:100px;	margin-top:50px;}
 .post-page{	float:right !Important;}
 .campaign-wrapper{	margin-top:50px;	float:right;	text-align:right;	width:150px;}
+.sx-stats-btn { background: url(../images/stats.png) no-repeat center center; display: block; width: 20px; height: 20px; float: left; margin-right: 2px;}

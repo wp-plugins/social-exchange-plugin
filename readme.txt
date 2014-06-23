@@ -87,6 +87,9 @@ This plugin is not for showing  social media buttons on your site, but for incre
 
 == Changelog ==
 
+= 2.9.2 - 2014-06-23 =
+* Sharing stats updates
+
 = 2.9.1 - 2014-06-03 =
 * Resolving Skip URL exception after closing share screen
 
