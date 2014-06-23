@@ -26,17 +26,17 @@ function sxRefreshData(){
 						data:{action:"reload_data"},
 						dataType:"json",
 						success:function(r){
-							jQuery(".share-loader").fadeOut(100,function(){ 
+							jQuery(".share-loader").fadeOut(100,function(){
 								jQuery("#sxpoints").html(r.points);
 								jQuery(".shares-result").html(r.next);
 								jQuery(".skip-share").on("click",SkipShare);
 							});
-										
+
 						}
 					});
 				});
 			 }) ;
-} 
+}
 function SkipShare() {
 	var parent = jQuery("#sx-share-row");
 	parent.fadeOut(200,function(){
@@ -57,10 +57,10 @@ function SkipShare() {
 	return false;
 }
 jQuery(document).ready(function(){
-	 
+
 	jQuery(".skip-share").on("click",SkipShare);
 
-	
+
 })
 
 
@@ -159,7 +159,7 @@ jQuery(document).ready(function(){
 						<?php } ?>
 					<br/><hr/>
 					<p>
-						<a href='<?php echo 'http://www.moresharesforyou.com/URL/'.get_bloginfo('url'); ?>' target="_blank">Check my Social stats</a>
+						<a href='<?php echo 'http://www.moresharesforyou.com/URL/'.get_bloginfo('url'); ?>' target="_blank"><div class="sx-stats-btn"></div>Check my Social stats</a>
 					</p>
 					</td>
 				</tr>
