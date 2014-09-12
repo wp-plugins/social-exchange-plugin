@@ -104,7 +104,7 @@ jQuery(document).ready(function(){
 	</div>
 	<div class="sx-row">
 		<div class="sx-left">
-		<p>Gain More Points by Sharing posts and pages in the box below. <a href ="http://moresharesforyou.com/get-more-points/">More on How to get more points on www.MoreSharesForYou.com</a> </p>
+		<p>Gain More Points by Sharing posts and pages in the box below. More on How to get more points on <a href ="http://moresharesforyou.com/get-more-points/">www.MoreSharesForYou.com</a> </p>
 		</div>
 	</div>
 </fieldset>
