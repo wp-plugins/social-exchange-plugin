@@ -3,12 +3,12 @@ Contributors: Social Exchange
 Donate link: 
 Tags:Facebook, share, like, sharing, social, social media,recommend, facebook like, facebook post, get shares, get likes,  WordPress post, get Facebook shares, increase Facebook Shares, increase Facebook likes, social exchange, Twitter, Google, Linkedin, bookmark button, bookmarking, bookmarks, facebook recommend,google plus, social bookmarking, social shares, moresharesforyou, more shares for you, SEO, SERP, traffic
 Requires at least: 3.3
-Tested up to: 3.8.2
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Get instant Facebook shares for your WordPress posts 
+Get instant Facebook shares and likes for your WordPress posts and pages !
 
 == Description ==
 
