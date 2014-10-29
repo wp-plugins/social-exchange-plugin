@@ -76,6 +76,10 @@ function sx_save_options($input){
 			return;
 		}
 		?>
+		<?php	if (($email['data']['email_confirmation']=='0') && ($email['data']['email']<>'no')) { ?>
+		<span style="font-size:11px; font-style:italic; color:#FF0000">Confirm your email address to get the free points! </span>
+		<?php ;} ?> <br />
+		
 		<p>Points available: <b> <?php echo $sxoptions['points']; ?></b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://moresharesforyou.com/get-more-points/" class="sx-get-more">How to get more points?</a></p>
 		<input type="hidden" name="sx-post-active" id="sx-post-active" value="<?php echo $likes['active']; ?>"/> <input type="hidden"  name="sx-post-done" value="<?php echo intval($likes['done'])  ; ?>"  style="  width: 50px;" />
 		Shares made:  <span id="sxsd_<?php echo $post->ID; ?>"><b><?php echo intval($likes['done'])  ; ?></b></span><br/>
