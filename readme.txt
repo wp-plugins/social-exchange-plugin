@@ -1,5 +1,5 @@
 === MoreSharesForYou - WordPress Sharing Community===
-Contributors: Social Exchange
+Contributors: Social Exchange, filkaris
 Donate link: 
 Tags:WordPress post,free,social sharing,Facebook,Facebook,Google,Like,Linkedin,Linked In,Like,Post,SERP,SEO,Share,Share,Social shares,Twitter,WordPress post,adsense,admin,analytics,bookmarks,bookmarking,bookmark button,bookmarks,bookmark,bookmarking,button,buzz,chrome,facebook post,facebook like,facebook recommend,facebook recommend,facebook post,facebook like,facebook like,get Facebook shares,get Facebook shares,get likes,get shares,get shares,get likes,google,google plus,google plus,google,google plus one,google plus,increase Facebook Shares,increase Facebook likes,increase Facebook likes,increase Facebook Shares,linkedin,linkedin,like,more shares for you,moresharesforyou,more shares for you,moresharesforyou,page,pages,plus one,plugin,plus 1,posts,recommend,serp,seo,sexybookmarks,seo,share,sharing,sharing,sharing,social bookmarking,social,social media,social bookmarking,social bookmars,social shares,social gallery,social exchange,social media,social,social,social exchange,theme,traffic,traffic,tweet,twitter,twitter,widget,+1,Facebook,bookmark button,recommend,
 Requires at least: 3.3
